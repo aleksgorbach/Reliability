@@ -1,11 +1,11 @@
 import React from "react";
-import Card from "./../../components/card";
+import { ImageCard } from "./../../components/card";
 import "./home.scss";
 
 const Cards = [
     {
         img: require("./../../images/reliability.jpg"),
-        content: "Расчёт параметров надежности оборудования!",
+        content: "Расчёт параметров надежности оборудования",
         url: "/reliability"
     },
     {
@@ -17,11 +17,11 @@ const Cards = [
 
 const home = (props) => {
     const cards = Cards.map(card => 
-        <Card 
+        <ImageCard 
             key={card.content} 
             imgSrc={card.img} 
             content={card.content}
-            onClick={() => props.router.push(card.url)}
+            url={card.url}
         />
     )
     return (
