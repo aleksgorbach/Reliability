@@ -1,9 +1,12 @@
 import React from "react";
 import ReactDom from "react-dom";
 
-import Navigation from "./components/navigation";
+import { createRoutes } from "./routes/";
+
+const routes = createRoutes();
 
 ReactDom.render(
-    <Navigation />,
+    routes,
     document.getElementById('app')
 )
+

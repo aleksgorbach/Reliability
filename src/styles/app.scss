@@ -1,0 +1,8 @@
+html, body, #app, main {
+    height: 100%
+}
+
+[data-reactroot] {
+    height: 100% !important; 
+    background-color: white
+}

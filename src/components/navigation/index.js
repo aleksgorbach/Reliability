@@ -1,19 +1,39 @@
 import React from "react";
+import { Link } from "react-router";
 
 import "bulma";
 
-const nav = props => {
+const routes = [
+    {
+        title: "Главная",
+        path: "/"
+    },
+    {
+        title: "Расчёт параметров надежности",
+        path: "/reliability"
+    },
+    {
+        title: "Электрические расчёты",
+        path: "/electric"
+    }
+]
+
+const Navigation = (props) => {
+    const links = routes.map(route => <Link
+        key={route.path}
+        className={"nav-item is-tab " + (props.activePage === route.path ? "is-active" : "")}
+        to={route.path}>
+        {route.title}
+    </Link>)
     return (
         <nav className="nav has-shadow">
             <div className="container">
                 <div className="nav-left">
-                    <a className="nav-item is-tab is-active">Главная</a>
-                    <a className="nav-item is-tab">Расчёт параметров надежности</a>
-                    <a className="nav-item is-tab">Электрические расчёты</a>
+                    {links}
                 </div>
             </div>
         </nav>
     )
 }
 
-export default nav;
+export default Navigation;

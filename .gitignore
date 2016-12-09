@@ -40,3 +40,7 @@ obj/
 bin/
 wwwroot/css/
 wwwroot/js/
+wwwroot/*.jpg
+wwwroot/*.jpeg
+wwwroot/*.png
+wwwroot/*.svg

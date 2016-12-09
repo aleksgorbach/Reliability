@@ -18,6 +18,13 @@ module.exports = {
             {
                 test: /\.(scss|sass)$/,
                 loader: extract.extract('style', 'css!sass')
+            },
+            {
+                test: /\.(jpe?g|png|gif|svg)/,
+                loaders: [
+                    'file?name=[hash].[ext]'
+                    //'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+                ]
             }
         ]
     },
