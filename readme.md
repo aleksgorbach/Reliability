@@ -7,7 +7,8 @@ Preparation
     
 Running
 =
-dotnet run
+
+    dotnet run
     npm start
 
 Then go to http://localhost:5000
