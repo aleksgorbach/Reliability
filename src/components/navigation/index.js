@@ -14,7 +14,7 @@ const routes = [
     },
     {
         title: "Электрические расчёты",
-        path: "/electric"
+        path: "/electricity"
     }
 ]
 

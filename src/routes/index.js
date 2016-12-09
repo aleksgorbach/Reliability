@@ -4,8 +4,7 @@ import React from "react";
 import App from "./../containers/app";
 import Home from "./../containers/home";
 import Reliability from "./../containers/reliability";
-import Electric from "./../containers/electric";
-
+import Electricity from "./../containers/electric";
 
 export const createRoutes = () => {
     return (
@@ -13,7 +12,7 @@ export const createRoutes = () => {
             <Route path="/" component={App}>
                 <IndexRoute component={Home} />
                 <Route path="reliability" component={Reliability} />
-                <Route path="electric" component={Electric} />
+                <Route path="electricity" component={Electricity} />
             </Route>
         </Router>
     )

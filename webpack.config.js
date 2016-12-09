@@ -1,11 +1,16 @@
 ﻿const webpack = require('webpack');
 const extract = require('extract-text-webpack-plugin');
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: "./src/index",
+    entry: [
+        path.join(__dirname, 'src/index.js')
+    ],
     output: {
-        path: __dirname + "/wwwroot/",
-        filename: "js/app.js"
+        path: __dirname + "/dist/",
+        filename: "js/app.js",
+        publicPath: "/"
     },
     devtool: "source-map",
     module: {
@@ -23,7 +28,6 @@ module.exports = {
                 test: /\.(jpe?g|png|gif|svg)/,
                 loaders: [
                     'file?name=[hash].[ext]'
-                    //'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
                 ]
             }
         ]
@@ -31,7 +35,7 @@ module.exports = {
     resolve: {
         modules: ['node_modules'],
         alias: {
-            'bulma': require('path').join(__dirname, './node_modules/bulma/bulma.sass')
+            'bulma': path.join(__dirname, './node_modules/bulma/bulma.sass')
         }
     },
     plugins: [

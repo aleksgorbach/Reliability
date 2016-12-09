@@ -38,9 +38,9 @@ jspm_packages
 
 obj/
 bin/
-wwwroot/css/
-wwwroot/js/
-wwwroot/*.jpg
-wwwroot/*.jpeg
-wwwroot/*.png
-wwwroot/*.svg
+dist/css/
+dist/js/
+dist/*.jpg
+dist/*.jpeg
+dist/*.png
+dist/*.svg
