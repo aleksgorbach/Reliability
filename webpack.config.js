@@ -1,7 +1,6 @@
 ﻿const webpack = require('webpack');
 const extract = require('extract-text-webpack-plugin');
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: [
